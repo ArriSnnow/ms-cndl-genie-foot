@@ -17,7 +17,7 @@
     --muted:#5f6368;
     --muted-2:#80868b;
     --accent:#1a7a45;
-    --navy:#011E59;
+    --navy:#f2ab05;
     --sky:#79DBFD;
     --sky-soft:#e8f7fe;
     --sky-hover:#cfeefc; 
@@ -331,8 +331,8 @@ document.title = CONTEST + " - MS CNDL";
 document.getElementById("seasonValue").textContent = SEASON;
 (function(){
   const L = TABLE[0];
-  const gap = TABLE[1] ? L.Pts - TABLE[1].Pts : 0;
-  const tail = gap>0 ? ` (+${gap})` : "";
+  const diff = L.GD;
+  const tail = diff > 0 ? ` (+${diff})` : ` (${diff})`;
   document.getElementById("sbLeader").innerHTML = `Leader : <b>${L.name}</b> · ${L.Pts} pts${tail}`;
 })();
 
